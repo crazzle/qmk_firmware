@@ -28,11 +28,11 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_QWERTY] = LAYOUT_ortho_5x13(
-        XXXXXXX,    DE_1,       DE_2,       DE_3,       DE_4,       DE_5,     KC_POWER,  DE_6,    DE_7,    DE_8,    DE_9,    DE_0,    MOUSE,
-        KC_TAB,     DE_Q,       DE_W,       DE_E,       DE_R,       DE_T,     XXXXXXX,   DE_Y,    DE_U,    DE_I,    DE_O,    DE_P,    KC_BSPC,
-        KC_ESC,     DE_A,       DE_S,       DE_D,       DE_F,       DE_G,     XXXXXXX,   DE_H,    DE_J,    DE_K,    DE_L,    DE_SCLN, DE_QUOT,
-        KC_LSFT,    DE_Z,       DE_X,       DE_C,       DE_V,       DE_B,     XXXXXXX,   DE_N,    DE_M,    DE_COMM, DE_DOT,  DE_SLSH, KC_ENT,
-        FN,         KC_LCTL,    KC_LALT,    KC_LGUI,    LOWER,      KC_SPC,   KC_MUTE,   KC_SPC,  RAISE,   KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT
+        KC_POWER,    DE_1,       DE_2,       DE_3,       DE_4,       DE_5,    KC_MUTE,  DE_6,    DE_7,    DE_8,    DE_9,    DE_0,    MOUSE,
+        KC_TAB,     DE_Q,       DE_W,       DE_E,       DE_R,       DE_T,     KC_WH_D,   DE_Y,    DE_U,    DE_I,    DE_O,    DE_P,    KC_BSPC,
+        KC_ESC,     DE_A,       DE_S,       DE_D,       DE_F,       DE_G,     KC_WH_R,   DE_H,    DE_J,    DE_K,    DE_L,    DE_SCLN, DE_QUOT,
+        KC_LSFT,    DE_Z,       DE_X,       DE_C,       DE_V,       DE_B,     KC_WH_L,   DE_N,    DE_M,    DE_COMM, DE_DOT,  DE_SLSH, KC_ENT,
+        FN,         KC_LCTL,    KC_LALT,    KC_LGUI,    LOWER,      KC_SPC,   KC_WH_U,   KC_SPC,  RAISE,   KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT
     ),
 
     [_SYMBOLS] = LAYOUT_ortho_5x13(
@@ -54,17 +54,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_UMLAUTS] = LAYOUT_ortho_5x13(
         _______,    _______,     _______,     _______,    _______,   _______, XXXXXXX,   _______,  _______, _______, _______, _______, _______,
         XXXXXXX,    XXXXXXX,     XXXXXXX,     XXXXXXX,    XXXXXXX,   XXXXXXX, XXXXXXX  ,XXXXXXX,  DE_UDIA, XXXXXXX, DE_ODIA, XXXXXXX, XXXXXXX,
-        XXXXXXX,    DE_ADIA,     DE_SS,       XXXXXXX,    XXXXXXX,   XXXXXXX, XXXXXXX  ,XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX,    DE_ADIA,     DE_SS,       XXXXXXX,    XXXXXXX,   XXXXXXX, XXXXXXX  ,KC_LEFT,  KC_DOWN, KC_UP, KC_RIGHT, XXXXXXX, XXXXXXX,
         _______,    XXXXXXX,     XXXXXXX,     XXXXXXX,    XXXXXXX,   XXXXXXX, XXXXXXX  ,XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         XXXXXXX,    _______,     _______,     _______,    _______,   _______, XXXXXXX  ,_______,  _______, _______, _______, _______, _______
     ),
 
     [_MOUSE] = LAYOUT_ortho_5x13(
         XXXXXXX,    XXXXXXX,     XXXXXXX,     XXXXXXX,    XXXXXXX,   XXXXXXX,   XXXXXXX,      XXXXXXX,       XXXXXXX,    XXXXXXX,       XXXXXXX,   XXXXXXX,    _______,
-        XXXXXXX,    XXXXXXX,     KC_MS_U,     XXXXXXX,    XXXXXXX,   XXXXXXX,   XXXXXXX,      XXXXXXX,       XXXXXXX,    XXXXXXX,       KC_WH_D,   XXXXXXX,    XXXXXXX,
-        XXXXXXX,    KC_MS_L,     KC_MS_D,     KC_MS_R,    XXXXXXX,   XXXXXXX,   XXXXXXX,      XXXXXXX,       XXXXXXX,    KC_WH_R,       KC_WH_U,   KC_WH_L,    XXXXXXX,
-        XXXXXXX,    XXXXXXX,     XXXXXXX,     XXXXXXX,    XXXXXXX,   XXXXXXX,   XXXXXXX,      XXXXXXX,       XXXXXXX,    XXXXXXX,       XXXXXXX,   XXXXXXX,    XXXXXXX,
-        XXXXXXX,    XXXXXXX,     XXXXXXX,     XXXXXXX,    KC_BTN1,   KC_BTN2,   XXXXXXX,      XXXXXXX,       XXXXXXX,    XXXXXXX,       XXXXXXX,   XXXXXXX,    XXXXXXX
+        XXXXXXX,    KC_BTN1,     KC_MS_U,     KC_BTN2,    XXXXXXX,   XXXXXXX,   _______,      XXXXXXX,       XXXXXXX,    XXXXXXX,       XXXXXXX,   XXXXXXX,    XXXXXXX,
+        XXXXXXX,    KC_MS_L,     KC_MS_D,     KC_MS_R,    XXXXXXX,   XXXXXXX,   _______,      XXXXXXX,       XXXXXXX,    XXXXXXX,       XXXXXXX,   XXXXXXX,    XXXXXXX,
+        XXXXXXX,    XXXXXXX,     XXXXXXX,     XXXXXXX,    XXXXXXX,   XXXXXXX,   _______,      XXXXXXX,       XXXXXXX,    XXXXXXX,       XXXXXXX,   XXXXXXX,    XXXXXXX,
+        XXXXXXX,    XXXXXXX,     XXXXXXX,     XXXXXXX,    XXXXXXX,   XXXXXXX,   _______,      XXXXXXX,       XXXXXXX,    XXXXXXX,       XXXXXXX,   XXXXXXX,    XXXXXXX
     ),
 };
 
