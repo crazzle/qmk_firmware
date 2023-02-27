@@ -100,7 +100,7 @@ bool is_oneshot_ignored_key(uint16_t keycode) {
 #ifdef RGBLIGHT_ENABLE
 void keyboard_post_init_user(void) {
   rgblight_enable_noeeprom(); // Enables RGB, without saving settings
-  rgblight_sethsv_noeeprom(HSV_ORANGE);
+  rgblight_sethsv_noeeprom(104, 255, 135);
   rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
 }
 #endif
